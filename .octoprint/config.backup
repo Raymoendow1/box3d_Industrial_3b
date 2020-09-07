@@ -1,0 +1,27 @@
+api:
+  key: D809B50FB10D4070AD6A0ADB10D18998
+plugins:
+  announcements:
+    _config_version: 1
+  cura:
+    cura_engine: /usr/local/bin/cura_engine
+  discovery:
+    publicPort: 80
+  errortracking:
+    unique_id: 6af842d3-1fe8-436f-8259-9a181d5bf8fd
+  softwareupdate:
+    _config_version: 6
+  tracking:
+    unique_id: 8cb176d2-c3a1-4b9c-9d12-512337c426a2
+printerProfiles:
+  default: _default
+server:
+  commands:
+    serverRestartCommand: sudo service octoprint restart
+    systemRestartCommand: sudo shutdown -r now
+    systemShutdownCommand: sudo shutdown -h now
+  secretKey: S6UDbHH46u0Zl5MLDoPbBxHf0825I9ni
+webcam:
+  ffmpeg: /usr/bin/ffmpeg
+  snapshot: http://127.0.0.1:8080/?action=snapshot
+  stream: /webcam/?action=stream

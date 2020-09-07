@@ -1,0 +1,11 @@
+.cache/pip
+mjpg-streamer
+.local/share/nano
+.bash_history
+.bash_logout
+.bashrc
+.profile
+.python_history
+.wget-hsts
+logs/
+*/logs*
