@@ -29,6 +29,42 @@ plugins:
     unique_id: 8cb176d2-c3a1-4b9c-9d12-512337c426a2
 printerProfiles:
   default: _default
+appearance:
+  color: blue
+  colorTransparent: false
+  name: box3d Industrial
+events:
+  enabled: true
+  subscriptions:
+  - command: killall blink; ~/.octoprint/scripts/IO_off 2 3 12; ~/.octoprint/scripts/IO_on
+      2 3 12
+    event: Connected
+    type: system
+  - command: killall blink; ~/.octoprint/scripts/IO_off 2 3 12; ~/.octoprint/scripts/blink
+      2 3 12
+    event: Connecting
+    type: system
+    event: ClientOpened
+    type: system
+  - command: killall blink; ~/.octoprint/scripts/IO_off 3 12;  ~/.octoprint/scripts/IO_on
+      12
+    event: Upload
+    type: system
+  - command: killall blink; ~/.octoprint/scripts/IO_off 2 3 12; ~/.octoprint/scripts/blink
+      12
+    event: PrintDone
+    type: system
+  - command: killall blink; ~/.octoprint/scripts/IO_off 2 3 12; ~/.octoprint/scripts/blink
+      2
+    event: PrintCancelled
+    type: system
+  - command: killall blink; ~/.octoprint/scripts/IO_on 2 3 12
+    event: PrintStarted
+    type: system
+  - command: killall blink; ~/.octoprint/scripts/IO_off 2 3 12; ~/.octoprint/scripts/IO_on
+      2
+    event: Disconnected
+    type: system
 server:
   commands:
     serverRestartCommand: sudo service octoprint restart
