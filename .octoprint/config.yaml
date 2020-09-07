@@ -2,33 +2,6 @@ accessControl:
   enabled: false
 api:
   key: D809B50FB10D4070AD6A0ADB10D18998
-plugins:
-  announcements:
-    _config_version: 1
-    channels:
-      _blog:
-        read_until: 1596033900
-      _important:
-        read_until: 1521111600
-      _octopi:
-        read_until: 1573722900
-      _plugins:
-        read_until: 1598158800
-      _releases:
-        read_until: 1596714600
-  cura:
-    cura_engine: /usr/local/bin/cura_engine
-  discovery:
-    publicPort: 80
-  errortracking:
-    unique_id: 6af842d3-1fe8-436f-8259-9a181d5bf8fd
-  softwareupdate:
-    _config_version: 6
-  tracking:
-    enabled: false
-    unique_id: 8cb176d2-c3a1-4b9c-9d12-512337c426a2
-printerProfiles:
-  default: _default
 appearance:
   color: blue
   colorTransparent: false
@@ -43,8 +16,6 @@ events:
   - command: killall blink; ~/.octoprint/scripts/IO_off 2 3 12; ~/.octoprint/scripts/blink
       2 3 12
     event: Connecting
-    type: system
-    event: ClientOpened
     type: system
   - command: killall blink; ~/.octoprint/scripts/IO_off 3 12;  ~/.octoprint/scripts/IO_on
       12
@@ -65,6 +36,37 @@ events:
       2
     event: Disconnected
     type: system
+plugins:
+  announcements:
+    _config_version: 1
+    channels:
+      _blog:
+        read_until: 1596033900
+      _important:
+        read_until: 1521111600
+      _octopi:
+        read_until: 1573722900
+      _plugins:
+        read_until: 1598158800
+      _releases:
+        read_until: 1596714600
+  cura:
+    cura_engine: /usr/local/bin/cura_engine
+  discovery:
+    publicPort: 80
+    upnpUuid: f3cfa0ac-ac41-4879-8dfb-d91723fedd3b
+  errortracking:
+    unique_id: 6af842d3-1fe8-436f-8259-9a181d5bf8fd
+  softwareupdate:
+    _config_version: 6
+  tracking:
+    enabled: false
+    unique_id: 8cb176d2-c3a1-4b9c-9d12-512337c426a2
+printerProfiles:
+  default: _default
+serial:
+  baudrate: 0
+  port: AUTO
 server:
   commands:
     serverRestartCommand: sudo service octoprint restart

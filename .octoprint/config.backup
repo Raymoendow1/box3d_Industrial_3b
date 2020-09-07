@@ -1,26 +1,97 @@
+accessControl:
+  enabled: false
 api:
   key: D809B50FB10D4070AD6A0ADB10D18998
+appearance:
+  color: blue
+  colorTransparent: false
+  name: box3d Industrial
+events:
+  enabled: true
+  subscriptions:
+  - command: killall blink; ~/.octoprint/scripts/IO_off 2 3 12; ~/.octoprint/scripts/IO_on
+      2 3 12
+    event: Connected
+    type: system
+  - command: killall blink; ~/.octoprint/scripts/IO_off 2 3 12; ~/.octoprint/scripts/blink
+      2 3 12
+    event: Connecting
+    type: system
+  - command: killall blink; ~/.octoprint/scripts/IO_off 3 12;  ~/.octoprint/scripts/IO_on
+      12
+    event: Upload
+    type: system
+  - command: killall blink; ~/.octoprint/scripts/IO_off 2 3 12; ~/.octoprint/scripts/blink
+      12
+    event: PrintDone
+    type: system
+  - command: killall blink; ~/.octoprint/scripts/IO_off 2 3 12; ~/.octoprint/scripts/blink
+      2
+    event: PrintCancelled
+    type: system
+  - command: killall blink; ~/.octoprint/scripts/IO_on 2 3 12
+    event: PrintStarted
+    type: system
+  - command: killall blink; ~/.octoprint/scripts/IO_off 2 3 12; ~/.octoprint/scripts/IO_on
+      2
+    event: Disconnected
+    type: system
 plugins:
   announcements:
     _config_version: 1
+    channels:
+      _blog:
+        read_until: 1596033900
+      _important:
+        read_until: 1521111600
+      _octopi:
+        read_until: 1573722900
+      _plugins:
+        read_until: 1598158800
+      _releases:
+        read_until: 1596714600
   cura:
     cura_engine: /usr/local/bin/cura_engine
   discovery:
     publicPort: 80
+    upnpUuid: f3cfa0ac-ac41-4879-8dfb-d91723fedd3b
   errortracking:
     unique_id: 6af842d3-1fe8-436f-8259-9a181d5bf8fd
   softwareupdate:
     _config_version: 6
   tracking:
+    enabled: false
     unique_id: 8cb176d2-c3a1-4b9c-9d12-512337c426a2
 printerProfiles:
   default: _default
+serial:
+  autoconnect: true
+  baudrate: 0
+  port: AUTO
 server:
   commands:
     serverRestartCommand: sudo service octoprint restart
     systemRestartCommand: sudo shutdown -r now
     systemShutdownCommand: sudo shutdown -h now
+  firstRun: false
+  onlineCheck:
+    enabled: false
+  pluginBlacklist:
+    enabled: false
   secretKey: S6UDbHH46u0Zl5MLDoPbBxHf0825I9ni
+  seenWizards:
+    corewizard: 3
+    tracking: null
+temperature:
+  profiles:
+  - bed: 100
+    chamber: null
+    extruder: 210
+    name: ABS
+  - bed: 60
+    chamber: null
+    extruder: 180
+    name: PLA
 webcam:
   ffmpeg: /usr/bin/ffmpeg
   snapshot: http://127.0.0.1:8080/?action=snapshot
