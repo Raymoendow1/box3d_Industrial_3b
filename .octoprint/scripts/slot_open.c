@@ -47,9 +47,9 @@ int main(int argc, char *args[])
 				printf("Pinnumber %d not supported\n\n", GPIO);
 				return 1;
 			}
-			pinMode(GPIO, OUTPUT);
 		}
 
+	pinMode(GPIO, OUTPUT);
 	pinMode(LATCH_PIN, INPUT);
 	pullUpDnControl (LATCH_PIN, PUD_UP);
 

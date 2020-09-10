@@ -47,7 +47,7 @@ plugins:
       _octopi:
         read_until: 1573722900
       _plugins:
-        read_until: 1598158800
+        read_until: 1599454800
       _releases:
         read_until: 1596714600
   cura:
@@ -55,18 +55,242 @@ plugins:
   discovery:
     publicPort: 80
     upnpUuid: f3cfa0ac-ac41-4879-8dfb-d91723fedd3b
+  enclosure:
+    _config_version: 6
+    rpi_inputs:
+    - action_type: output_control
+      controlled_io: 6
+      controlled_io_set_value: low
+      ds18b20_serial: ''
+      edge: fall
+      filament_sensor_enabled: true
+      filament_sensor_timeout: 120
+      gpio_pin: '18'
+      index_id: 1
+      input_pull_resistor: input_pull_up
+      input_type: gpio
+      label: Latch
+      printer_action: filament
+      temp_sensor_address: ''
+      temp_sensor_humidity: ''
+      temp_sensor_navbar: true
+      temp_sensor_temp: ''
+      temp_sensor_type: ''
+      use_fahrenheit: false
+    rpi_outputs:
+    - active_low: false
+      alarm_set_temp: 0
+      auto_shutdown: false
+      auto_startup: false
+      controlled_io: 6
+      controlled_io_set_value: low
+      default_duty_cycle: 0
+      default_ledstrip_color: ''
+      default_neopixel_color: ''
+      duty_a: 0
+      duty_b: 0
+      duty_cycle: 0
+      gcode: ''
+      gpio_pin: '27'
+      gpio_status: 0
+      hide_btn_ui: false
+      index_id: 5
+      label: R
+      ledstrip_color: rgb(0,0,0)
+      ledstrip_gpio_clk: ''
+      ledstrip_gpio_dat: ''
+      linked_temp_sensor: null
+      microcontroller_address: 0
+      neopixel_brightness: 255
+      neopixel_color: rgb(0,0,0)
+      neopixel_count: 0
+      new_duty_cycle: ''
+      new_ledstrip_color: ''
+      new_neopixel_color: ''
+      output_type: regular
+      pwm_frequency: 50
+      pwm_status: 50
+      pwm_temperature_linked: false
+      shell_script: ''
+      show_on_navbar: false
+      shutdown_on_failed: false
+      shutdown_time: 0
+      startup_time: 0
+      startup_with_server: false
+      temp_ctr_deadband: 0
+      temp_ctr_default_value: 0
+      temp_ctr_max_temp: 0
+      temp_ctr_new_set_value: ''
+      temp_ctr_set_value: 0
+      temp_ctr_type: heater
+      temperature_a: 0
+      temperature_b: 0
+      toggle_timer: false
+      toggle_timer_off: 0
+      toggle_timer_on: 0
+    - active_low: false
+      alarm_set_temp: 0
+      auto_shutdown: false
+      auto_startup: false
+      controlled_io: 0
+      controlled_io_set_value: Low
+      default_duty_cycle: 0
+      default_ledstrip_color: ''
+      default_neopixel_color: ''
+      duty_a: 0
+      duty_b: 0
+      duty_cycle: 0
+      gcode: ''
+      gpio_pin: '22'
+      gpio_status: 0
+      hide_btn_ui: false
+      index_id: 6
+      label: G
+      ledstrip_color: rgb(0,0,0)
+      ledstrip_gpio_clk: ''
+      ledstrip_gpio_dat: ''
+      linked_temp_sensor: ''
+      microcontroller_address: 0
+      neopixel_brightness: 255
+      neopixel_color: rgb(0,0,0)
+      neopixel_count: 0
+      new_duty_cycle: ''
+      new_ledstrip_color: ''
+      new_neopixel_color: ''
+      output_type: regular
+      pwm_frequency: 50
+      pwm_status: 50
+      pwm_temperature_linked: false
+      shell_script: ''
+      show_on_navbar: false
+      shutdown_on_failed: false
+      shutdown_time: 0
+      startup_time: 0
+      startup_with_server: false
+      temp_ctr_deadband: 0
+      temp_ctr_default_value: 0
+      temp_ctr_max_temp: 0
+      temp_ctr_new_set_value: ''
+      temp_ctr_set_value: 0
+      temp_ctr_type: heater
+      temperature_a: 0
+      temperature_b: 0
+      toggle_timer: false
+      toggle_timer_off: 0
+      toggle_timer_on: 0
+    - active_low: false
+      alarm_set_temp: 0
+      auto_shutdown: false
+      auto_startup: false
+      controlled_io: 0
+      controlled_io_set_value: Low
+      default_duty_cycle: 0
+      default_ledstrip_color: ''
+      default_neopixel_color: ''
+      duty_a: 0
+      duty_b: 0
+      duty_cycle: 0
+      gcode: ''
+      gpio_pin: '10'
+      gpio_status: 0
+      hide_btn_ui: false
+      index_id: 8
+      label: B
+      ledstrip_color: rgb(0,0,0)
+      ledstrip_gpio_clk: ''
+      ledstrip_gpio_dat: ''
+      linked_temp_sensor: ''
+      microcontroller_address: 0
+      neopixel_brightness: 255
+      neopixel_color: rgb(0,0,0)
+      neopixel_count: 0
+      new_duty_cycle: ''
+      new_ledstrip_color: ''
+      new_neopixel_color: ''
+      output_type: regular
+      pwm_frequency: 50
+      pwm_status: 50
+      pwm_temperature_linked: false
+      shell_script: ''
+      show_on_navbar: false
+      shutdown_on_failed: false
+      shutdown_time: 0
+      startup_time: 0
+      startup_with_server: false
+      temp_ctr_deadband: 0
+      temp_ctr_default_value: 0
+      temp_ctr_max_temp: 0
+      temp_ctr_new_set_value: ''
+      temp_ctr_set_value: 0
+      temp_ctr_type: heater
+      temperature_a: 0
+      temperature_b: 0
+      toggle_timer: false
+      toggle_timer_off: 0
+      toggle_timer_on: 0
+    - active_low: true
+      alarm_set_temp: 0
+      auto_shutdown: false
+      auto_startup: false
+      controlled_io: 0
+      controlled_io_set_value: Low
+      default_duty_cycle: 0
+      default_ledstrip_color: ''
+      default_neopixel_color: ''
+      duty_a: 0
+      duty_b: 0
+      duty_cycle: 0
+      gcode: ''
+      gpio_pin: 0
+      gpio_status: false
+      hide_btn_ui: false
+      index_id: 9
+      label: Slot
+      ledstrip_color: rgb(0,0,0)
+      ledstrip_gpio_clk: ''
+      ledstrip_gpio_dat: ''
+      linked_temp_sensor: ''
+      microcontroller_address: 0
+      neopixel_brightness: 255
+      neopixel_color: rgb(0,0,0)
+      neopixel_count: 0
+      new_duty_cycle: ''
+      new_ledstrip_color: ''
+      new_neopixel_color: ''
+      output_type: shell_output
+      pwm_frequency: 50
+      pwm_status: 50
+      pwm_temperature_linked: false
+      shell_script: ./home/pi/.octoprint/scripts/slot_open
+      show_on_navbar: false
+      shutdown_on_failed: false
+      shutdown_time: 0
+      startup_time: 0
+      startup_with_server: false
+      temp_ctr_deadband: 0
+      temp_ctr_default_value: 0
+      temp_ctr_max_temp: 0
+      temp_ctr_new_set_value: ''
+      temp_ctr_set_value: 0
+      temp_ctr_type: heater
+      temperature_a: 0
+      temperature_b: 0
+      toggle_timer: false
+      toggle_timer_off: 0
+      toggle_timer_on: 0
   errortracking:
     unique_id: 6af842d3-1fe8-436f-8259-9a181d5bf8fd
   softwareupdate:
     _config_version: 6
+    check_providers:
+      enclosure: enclosure
+      helloworld: helloworld
   tracking:
     enabled: false
     unique_id: 8cb176d2-c3a1-4b9c-9d12-512337c426a2
 printerProfiles:
   default: _default
-serial:
-  baudrate: 0
-  port: AUTO
+serial: {}
 server:
   commands:
     serverRestartCommand: sudo service octoprint restart

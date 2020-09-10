@@ -1,6 +1,11 @@
 /:
-- _count: 2
-  _timestamp: 1599453678.257759
+- _count: 14
+  _timestamp: 1599705549.742346
+  base_url: http://3b/
+  path: /
+  query_string: l10n=en
+- _count: 7
+  _timestamp: 1599615443.781621
   base_url: http://3b.local/
   path: /
   query_string: l10n=en
