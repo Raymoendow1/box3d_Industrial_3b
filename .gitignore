@@ -9,3 +9,4 @@ mjpg-streamer
 .wget-hsts
 logs/
 */logs*
+/devel/
